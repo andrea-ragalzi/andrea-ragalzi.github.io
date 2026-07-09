@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#090e0b">
+<title>Résumé — Andrea Ragalzi</title>
+<style>
+:root{--bg:#090e0b;--surface:#101712;--text:#f2f5f3;--muted:#aeb8b1;--green:#7bd39a;--silver:#d9dfdc;--line:rgba(217,223,220,.14);--max:900px}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.55}
+a{color:inherit;text-decoration:none}.shell{width:min(calc(100% - 34px),var(--max));margin:auto}
+header{padding:22px 0;border-bottom:1px solid var(--line)}.nav{display:flex;justify-content:space-between;gap:18px;align-items:center}.back{color:var(--muted)}.back:hover{color:var(--green)}
+main{padding:64px 0}.top{display:grid;grid-template-columns:1fr auto;gap:28px;align-items:start;margin-bottom:42px}
+h1,h2,h3,p{margin-top:0}h1{font-size:clamp(2.7rem,7vw,5rem);line-height:.96;letter-spacing:-.065em;margin-bottom:10px}.role{color:var(--green);font-weight:750;font-size:1.15rem}.contact{display:grid;gap:6px;color:var(--muted);font-size:.92rem}
+section{padding:28px 0;border-top:1px solid var(--line)}h2{font-size:1.05rem;letter-spacing:.13em;text-transform:uppercase;color:var(--silver);margin-bottom:18px}
+.summary{color:var(--muted);max-width:760px}.skills{display:grid;gap:7px}.skills strong{color:var(--silver)}
+.entry{display:grid;grid-template-columns:165px 1fr;gap:24px;margin-bottom:25px}.entry:last-child{margin-bottom:0}.period{color:var(--muted);font-size:.85rem}.entry h3{margin-bottom:4px;font-size:1.16rem}.company{color:var(--green);font-weight:650}.entry ul{margin:10px 0 0;padding-left:19px;color:var(--muted)}.entry li{margin-bottom:6px}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}.btn{padding:10px 15px;border-radius:999px;border:1px solid var(--line);font-weight:700}.btn.primary{background:var(--silver);color:#07100a}
+@media(max-width:700px){.top,.entry{grid-template-columns:1fr}.contact{margin-top:4px}.entry{gap:6px}}
+@media print{
+  :root{--bg:#fff;--surface:#fff;--text:#111;--muted:#444;--green:#176b50;--silver:#111;--line:#ccc}
+  header,.actions{display:none}body{font-size:10.5pt}main{padding:0}.shell{width:100%;max-width:none}section{break-inside:avoid}.top{margin-bottom:18px}
+}
+</style>
+</head>
+<body>
+<header><div class="shell nav"><a class="back" href="index.html">← Portfolio</a><span>Andrea Ragalzi</span></div></header>
+<main class="shell">
+  <div class="top">
+    <div>
+      <h1>Andrea Ragalzi</h1>
+      <div class="role">Python Backend Developer · FastAPI · RAG</div>
+    </div>
+    <div class="contact">
+      <span>Málaga, Spain · EU citizen</span>
+      <a href="mailto:andrea.ragalzi.job@gmail.com">andrea.ragalzi.job@gmail.com</a>
+      <a href="https://www.linkedin.com/in/andrea-ragalzi">linkedin.com/in/andrea-ragalzi</a>
+      <a href="https://github.com/andrea-ragalzi">github.com/andrea-ragalzi</a>
+    </div>
+  </div>
+
+  <section>
+    <h2>Profile</h2>
+    <p class="summary">Python Backend Developer with around five years of experience building APIs, automation systems and production software in insurance and industrial environments. Strong focus on Python, FastAPI, automated testing, integrations and application lifecycle management. Recently designed and developed a full-stack RAG demo with advanced retrieval, conversation context and per-user data isolation.</p>
+  </section>
+
+  <section>
+    <h2>Technical skills</h2>
+    <div class="skills">
+      <div><strong>Backend:</strong> Python, FastAPI, Flask, REST APIs, Spring Boot, hexagonal and layered architecture</div>
+      <div><strong>RAG &amp; AI:</strong> LangChain, ChromaDB, embeddings, vector search, query expansion, reranking, LLM applications, YOLOv5</div>
+      <div><strong>Frontend:</strong> Next.js, React, TypeScript, JavaScript, HTML, CSS, Tailwind CSS</div>
+      <div><strong>Cloud &amp; tools:</strong> AWS Lambda, Docker, Git, Linux, Bash</div>
+      <div><strong>Testing &amp; data:</strong> Pytest, JUnit, SQL, relational databases, MongoDB, Firebase</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Selected project</h2>
+    <div class="entry">
+      <div class="period">2025 — Present</div>
+      <div>
+        <h3>Document Intelligent Hub</h3>
+        <div class="company">Personal full-stack RAG demo</div>
+        <ul>
+          <li>Designed and developed a PDF ingestion and source-grounded Q&amp;A workflow.</li>
+          <li>Implemented structural and fixed-size chunking, embeddings, metadata and ChromaDB vector search.</li>
+          <li>Built advanced retrieval with query expansion, multi-query search, result deduplication and hybrid reranking.</li>
+          <li>Used Python, FastAPI and LangChain on the backend; Next.js, TypeScript, Firebase and Docker across the product.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+    <div class="entry">
+      <div class="period">Oct 2023 — Feb 2025</div>
+      <div>
+        <h3>Backend Developer</h3>
+        <div class="company">HRM · Remote</div>
+        <ul>
+          <li>Built backend services for insurance-request automation with Python, AWS Lambda and hexagonal architecture.</li>
+          <li>Maintained and improved a production Spring Boot application.</li>
+          <li>Added unit tests with Pytest and JUnit to reduce regressions and improve code quality.</li>
+          <li>Collaborated with distributed teams in an IT consulting environment.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="period">Sep 2019 — Nov 2022</div>
+      <div>
+        <h3>Software Developer</h3>
+        <div class="company">Gefit S.p.A. · Alessandria, Italy</div>
+        <ul>
+          <li>Built Python and Flask applications for industrial PCs and Raspberry Pi devices.</li>
+          <li>Developed a YOLOv5 computer-vision system for automated recognition of industrial drum models.</li>
+          <li>Worked with relational databases and QNAP deployments using LXC/LXD.</li>
+          <li>Supported client installations in Italy and completed a two-week onsite assignment in the United States.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Education &amp; languages</h2>
+    <div class="entry"><div class="period">Jan — Jul 2023</div><div><h3>Full Stack Web Developer Bootcamp</h3><div class="company">Epicode Italia · Remote</div></div></div>
+    <div class="entry"><div class="period">2015 — 2021</div><div><h3>Computer Science studies</h3><div class="company">Università del Piemonte Orientale · Degree not completed</div></div></div>
+    <div class="entry"><div class="period">Languages</div><div>Italian: native · English: B2 professional working proficiency · Spanish: B2, intensive study and daily use in Málaga</div></div>
+
+    <div class="actions">
+      <button class="btn primary" type="button" onclick="window.print()">Print / Save as PDF</button>
+      <a class="btn" href="index.html">Back to portfolio</a>
+    </div>
+  </section>
+</main>
+</body>
+</html>
