@@ -27,7 +27,7 @@
   };
 
   const getClosestSection = () => {
-    const viewportReference = window.innerHeight * 0.35;
+    const viewportReference = window.innerHeight * 0.32;
     let closestSection = sections[0];
     let closestDistance = Number.POSITIVE_INFINITY;
 
@@ -94,8 +94,8 @@
         }
       },
       {
-        rootMargin: "-25% 0px -55% 0px",
-        threshold: [0, 0.1, 0.25, 0.5]
+        rootMargin: "-30% 0px -65% 0px",
+        threshold: 0
       }
     );
 
@@ -126,6 +126,9 @@
   if (sections.some((section) => section.id === initialSection)) {
     setActiveSection(initialSection);
   } else {
-    updateFromScrollPosition();
+    setActiveSection(sections[0].id);
+    if (!supportsIntersectionObserver) {
+      updateFromScrollPosition();
+    }
   }
 })();
