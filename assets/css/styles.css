@@ -419,31 +419,6 @@ section + section {
   font-weight: 680;
 }
 
-.project-flow {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.3rem 0.55rem;
-  margin: 1.15rem 0 0;
-  color: var(--silver);
-  font-size: 0.88rem;
-  font-weight: 720;
-}
-
-.project-flow__arrow {
-  color: var(--green);
-}
-
-.project-flow__next {
-  white-space: nowrap;
-}
-
-.featured-project__technical {
-  margin: 0.55rem 0 1rem;
-  color: var(--quiet);
-  font: 0.7rem ui-monospace, SFMono-Regular, Menlo, monospace;
-  line-height: 1.55;
-}
-
 .contact-copy {
   max-width: 35rem;
   color: var(--muted);

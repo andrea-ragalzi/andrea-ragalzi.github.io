@@ -26,20 +26,18 @@
     });
   };
 
-  const getClosestSection = () => {
-    const viewportReference = window.innerHeight * 0.32;
-    let closestSection = sections[0];
-    let closestDistance = Number.POSITIVE_INFINITY;
+  const getSectionAtReferenceLine = () => {
+    const viewportReference = window.innerHeight * 0.23;
+    let activeSection = sections[0];
 
-    sections.forEach((section) => {
-      const distance = Math.abs(section.getBoundingClientRect().top - viewportReference);
-      if (distance < closestDistance) {
-        closestDistance = distance;
-        closestSection = section;
+    for (const section of sections) {
+      if (section.getBoundingClientRect().top > viewportReference) {
+        break;
       }
-    });
+      activeSection = section;
+    }
 
-    return closestSection;
+    return activeSection;
   };
 
   const isAtPageEnd = () => (
@@ -52,9 +50,9 @@
       return;
     }
 
-    const closestSection = getClosestSection();
-    if (closestSection) {
-      setActiveSection(closestSection.id);
+    const activeSection = getSectionAtReferenceLine();
+    if (activeSection) {
+      setActiveSection(activeSection.id);
     }
   };
 
@@ -76,32 +74,6 @@
     }
   });
 
-  const supportsIntersectionObserver = "IntersectionObserver" in window;
-
-  if (supportsIntersectionObserver) {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (Date.now() < navigationLockUntil) {
-          return;
-        }
-
-        const visibleEntries = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
-
-        if (visibleEntries[0]) {
-          setActiveSection(visibleEntries[0].target.id);
-        }
-      },
-      {
-        rootMargin: "-30% 0px -65% 0px",
-        threshold: 0
-      }
-    );
-
-    sections.forEach((section) => observer.observe(section));
-  }
-
   let ticking = false;
   const onScroll = () => {
     if (ticking) {
@@ -109,9 +81,7 @@
     }
 
     window.requestAnimationFrame(() => {
-      if (isAtPageEnd()) {
-        setActiveSection(sections[sections.length - 1].id);
-      } else if (!supportsIntersectionObserver && Date.now() >= navigationLockUntil) {
+      if (Date.now() >= navigationLockUntil) {
         updateFromScrollPosition();
       }
       ticking = false;
@@ -126,9 +96,6 @@
   if (sections.some((section) => section.id === initialSection)) {
     setActiveSection(initialSection);
   } else {
-    setActiveSection(sections[0].id);
-    if (!supportsIntersectionObserver) {
-      updateFromScrollPosition();
-    }
+    updateFromScrollPosition();
   }
 })();

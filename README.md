@@ -1,6 +1,8 @@
 # Andrea Ragalzi — Portfolio
 
-Static, mobile-first portfolio for a Python Backend Engineer. The site uses semantic HTML, plain CSS, and a small JavaScript file. It is compatible with local file opening and GitHub Pages.
+Static, mobile-first portfolio for Andrea Ragalzi, a Python Backend Engineer focused on APIs, backend systems, and applied RAG. The site uses semantic HTML, plain CSS, and a small JavaScript file.
+
+Public website: <https://andrea-ragalzi.github.io/>
 
 ## Files
 
@@ -11,19 +13,23 @@ Static, mobile-first portfolio for a Python Backend Engineer. The site uses sema
 - `assets/images/og-image.png` — social sharing image
 - `robots.txt` and `sitemap.xml` — basic crawler configuration
 
-## Required before deployment
-
-1. Recheck the Spanish language level and any dates against the final CV.
-
 ## Local preview
 
-Open `index.html` directly, or run:
+### Python HTTP server
 
 ```bash
 python3 -m http.server 8000
 ```
 
 Then visit `http://localhost:8000/`.
+
+### live-server
+
+```bash
+npx live-server .
+```
+
+Open the local URL printed by `live-server`.
 
 ## GitHub Pages
 
