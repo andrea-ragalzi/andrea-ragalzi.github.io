@@ -8,6 +8,7 @@
   --quiet: #829087;
   --green: #7bd39a;
   --silver: #d8deda;
+  --silver-path-opacity: 0.72;
   --line: rgba(216, 222, 218, 0.14);
   --hover: rgba(216, 222, 218, 0.045);
   --space-1: 0.25rem;
@@ -102,10 +103,31 @@ a {
 
 .profile-panel {
   position: relative;
+  isolation: isolate;
+  overflow: hidden;
   border-bottom: 1px solid var(--line);
   background:
     radial-gradient(circle at 92% 0%, rgba(216, 222, 218, 0.06), transparent 16rem),
+    radial-gradient(ellipse at 8% 100%, rgba(123, 211, 154, 0.035), transparent 22rem),
     linear-gradient(180deg, var(--background-raised), var(--background));
+}
+
+.profile-panel::before {
+  content: "";
+  position: absolute;
+  top: 64%;
+  left: -22%;
+  z-index: 0;
+  width: 148%;
+  height: clamp(5rem, 18vw, 10rem);
+  border-top: 1px solid rgba(216, 222, 218, 0.2);
+  border-radius: 50%;
+  background: radial-gradient(ellipse at 50% 0%, rgba(216, 222, 218, 0.1), rgba(216, 222, 218, 0.035) 28%, rgba(123, 211, 154, 0.018) 46%, transparent 70%);
+  box-shadow: 0 -0.65rem 1.8rem rgba(216, 222, 218, 0.035);
+  opacity: var(--silver-path-opacity);
+  pointer-events: none;
+  transform: translateY(-50%) rotate(-8deg);
+  transform-origin: center;
 }
 
 .profile-panel__inner,
@@ -115,6 +137,8 @@ a {
 }
 
 .profile-panel__inner {
+  position: relative;
+  z-index: 1;
   padding-block: var(--space-6) var(--space-4);
 }
 
