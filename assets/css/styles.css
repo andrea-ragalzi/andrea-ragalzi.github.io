@@ -112,22 +112,57 @@ a {
     linear-gradient(180deg, var(--background-raised), var(--background));
 }
 
-.profile-panel::before {
-  content: "";
+.forest-banner {
   position: absolute;
-  top: 64%;
-  left: -22%;
+  inset: 0;
   z-index: 0;
-  width: 148%;
-  height: clamp(5rem, 18vw, 10rem);
-  border-top: 1px solid rgba(216, 222, 218, 0.2);
-  border-radius: 50%;
-  background: radial-gradient(ellipse at 50% 0%, rgba(216, 222, 218, 0.1), rgba(216, 222, 218, 0.035) 28%, rgba(123, 211, 154, 0.018) 46%, transparent 70%);
-  box-shadow: 0 -0.65rem 1.8rem rgba(216, 222, 218, 0.035);
+  width: 100%;
+  height: 100%;
   opacity: var(--silver-path-opacity);
   pointer-events: none;
-  transform: translateY(-50%) rotate(-8deg);
-  transform-origin: center;
+}
+
+.forest-banner__trees {
+  transform-box: fill-box;
+  transform-origin: center bottom;
+  animation: forest-sway 18s ease-in-out infinite alternate;
+}
+
+.forest-banner__trees--far {
+  animation-duration: 24s;
+  animation-delay: -8s;
+}
+
+.forest-banner__light {
+  stroke-dasharray: 3 97;
+  stroke-dashoffset: -55;
+  opacity: 0.4;
+  animation: forest-travel 16s linear infinite;
+}
+
+.forest-banner__flame {
+  transform-box: fill-box;
+  transform-origin: center bottom;
+  opacity: 0.85;
+  animation: forest-flicker 5s ease-in-out infinite;
+}
+
+@keyframes forest-sway {
+  from { transform: rotate(-0.25deg); }
+  to { transform: rotate(0.25deg); }
+}
+
+@keyframes forest-travel {
+  0% { stroke-dashoffset: 3; opacity: 0; }
+  10% { opacity: 0.45; }
+  80% { opacity: 0.45; }
+  94%, 100% { stroke-dashoffset: -97; opacity: 0; }
+}
+
+@keyframes forest-flicker {
+  0%, 100% { transform: scale(1, 1); opacity: 0.85; }
+  35% { transform: scale(0.96, 1.04); opacity: 0.95; }
+  70% { transform: scale(1.03, 0.97); opacity: 0.8; }
 }
 
 .profile-panel__inner,
@@ -586,6 +621,10 @@ footer p {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .forest-banner * {
+    animation: none !important;
+  }
+
   html {
     scroll-behavior: auto;
   }
