@@ -106,29 +106,30 @@
                 >
                     <defs>
                         <linearGradient id="forest-silver" x2="0" y2="1">
-                            <stop stop-color="#d8deda" stop-opacity="0.22" />
-                            <stop offset="1" stop-color="#7bd39a" stop-opacity="0.04" />
+                            <stop stop-color="var(--silver)" stop-opacity="0.22" />
+                            <stop offset="1" stop-color="var(--silver)" stop-opacity="0.04" />
                         </linearGradient>
                         <linearGradient id="forest-path" x1="0" y1="1" x2="1" y2="0">
-                            <stop stop-color="#d8deda" stop-opacity="0.02" />
-                            <stop offset="0.6" stop-color="#d8deda" stop-opacity="0.13" />
-                            <stop offset="1" stop-color="#d8deda" stop-opacity="0.04" />
+                            <stop stop-color="var(--silver)" stop-opacity="0.02" />
+                            <stop offset="0.6" stop-color="var(--silver)" stop-opacity="0.13" />
+                            <stop offset="1" stop-color="var(--silver)" stop-opacity="0.04" />
                         </linearGradient>
                         <radialGradient id="forest-glow">
-                            <stop stop-color="#d8deda" stop-opacity="0.13" />
-                            <stop offset="0.45" stop-color="#7bd39a" stop-opacity="0.04" />
-                            <stop offset="1" stop-color="#7bd39a" stop-opacity="0" />
+                            <stop stop-color="var(--text)" stop-opacity="0.22" />
+                            <stop offset="0.16" stop-color="var(--silver)" stop-opacity="0.12" />
+                            <stop offset="0.45" stop-color="var(--silver)" stop-opacity="0.025" />
+                            <stop offset="0.7" stop-color="var(--silver)" stop-opacity="0" />
                         </radialGradient>
                         <linearGradient id="forest-flame" x2="0.3" y2="1">
-                            <stop stop-color="#edf2ef" />
-                            <stop offset="0.65" stop-color="#d8deda" />
-                            <stop offset="1" stop-color="#7bd39a" stop-opacity="0.5" />
+                            <stop stop-color="var(--text)" />
+                            <stop offset="0.65" stop-color="var(--silver)" />
+                            <stop offset="1" stop-color="var(--silver)" />
                         </linearGradient>
                         <path id="forest-tree" d="M0 0 14 38 7 36 23 67 12 63 30 98 3 91 3 116 -3 116 -3 91 -30 98 -12 63 -23 67 -7 36 -14 38Z" />
                         <path id="forest-trail" pathLength="100" d="M100 920 C160 814 515 862 548 701 S478 422 520 183" />
                     </defs>
                     <ellipse cx="520" cy="173" rx="125" ry="145" fill="url(#forest-glow)" />
-                    <g fill="url(#forest-silver)">
+                    <g class="forest-banner__scenery" fill="url(#forest-silver)">
                         <g class="forest-banner__trees forest-banner__trees--far" opacity="0.48">
                             <use href="#forest-tree" transform="translate(18 80) scale(1.1 2.9)" />
                             <use href="#forest-tree" transform="translate(65 290) scale(0.7 2.2)" />
@@ -144,24 +145,24 @@
                             <use href="#forest-tree" transform="translate(7 700) scale(2 3.5)" />
                             <use href="#forest-tree" transform="translate(83 825) scale(0.8 1.6)" />
                         </g>
+                        <path
+                            d="M58 920 C134 792 492 868 536 704 S466 422 520 183 C489 430 573 554 560 704 S195 851 152 920Z"
+                            fill="url(#forest-path)"
+                        />
+                        <use href="#forest-trail" fill="none" stroke="var(--silver)" stroke-opacity="0.15" stroke-width="1" />
+                        <use
+                            class="forest-banner__light"
+                            href="#forest-trail"
+                            fill="none"
+                            stroke="var(--silver)"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                        />
                     </g>
-                    <path
-                        d="M58 920 C134 792 492 868 536 704 S466 422 520 183 C489 430 573 554 560 704 S195 851 152 920Z"
-                        fill="url(#forest-path)"
-                    />
-                    <use href="#forest-trail" fill="none" stroke="#d8deda" stroke-opacity="0.15" stroke-width="1" />
-                    <use
-                        class="forest-banner__light"
-                        href="#forest-trail"
-                        fill="none"
-                        stroke="#d8deda"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                    />
                     <g transform="translate(520 176)">
                         <g class="forest-banner__flame">
                             <path d="M0 7 C-16 4 -14 -8 -7 -17 C-5 -10 -1 -12 -2 -22 C-3 -30 4 -34 5 -39 C6 -26 17 -18 13 -7 C11 1 7 6 0 7Z" fill="url(#forest-flame)" />
-                            <path d="M0 5 C-6 1 -5 -5 0 -13 C-1 -6 7 -4 5 1 C4 4 2 5 0 5Z" fill="#edf2ef" opacity="0.75" />
+                            <path d="M0 5 C-6 1 -5 -5 0 -13 C-1 -6 7 -4 5 1 C4 4 2 5 0 5Z" fill="var(--text)" />
                         </g>
                     </g>
                 </svg>

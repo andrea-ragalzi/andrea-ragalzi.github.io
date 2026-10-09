@@ -1,29 +1,40 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title description">
   <title id="title">Andrea Ragalzi — Backend Engineer</title>
   <desc id="description">Python, REST APIs and System Integrations. A silver forest frames a path toward a small silver flame against a dark green background.</desc>
+  <style>
+    svg {
+      --background: #07120f;
+      --deep-green: #1d3a31;
+      --green: #7bd39a;
+      --silver: #b8c1c8;
+      --text: #f0f6fc;
+    }
+  </style>
   <defs>
-    <linearGradient id="background" x2="0" y2="1">
-      <stop stop-color="#0d1510"/>
-      <stop offset="1" stop-color="#09100c"/>
+    <linearGradient id="background" x2="0" y2="2">
+      <stop stop-color="var(--background)"/>
+      <stop offset="0.35" stop-color="var(--background)"/>
+      <stop offset="1" stop-color="var(--deep-green)"/>
     </linearGradient>
     <linearGradient id="silver" x2="0" y2="1">
-      <stop stop-color="#d8deda" stop-opacity="0.24"/>
-      <stop offset="1" stop-color="#7bd39a" stop-opacity="0.05"/>
+      <stop stop-color="var(--silver)" stop-opacity="0.24"/>
+      <stop offset="1" stop-color="var(--silver)" stop-opacity="0.05"/>
     </linearGradient>
     <linearGradient id="path" x1="0" y1="1" x2="1" y2="0">
-      <stop stop-color="#d8deda" stop-opacity="0.02"/>
-      <stop offset="0.6" stop-color="#d8deda" stop-opacity="0.14"/>
-      <stop offset="1" stop-color="#d8deda" stop-opacity="0.04"/>
+      <stop stop-color="var(--silver)" stop-opacity="0.02"/>
+      <stop offset="0.6" stop-color="var(--silver)" stop-opacity="0.14"/>
+      <stop offset="1" stop-color="var(--silver)" stop-opacity="0.04"/>
     </linearGradient>
     <radialGradient id="glow">
-      <stop stop-color="#d8deda" stop-opacity="0.14"/>
-      <stop offset="0.45" stop-color="#7bd39a" stop-opacity="0.05"/>
-      <stop offset="1" stop-color="#7bd39a" stop-opacity="0"/>
+      <stop stop-color="var(--text)" stop-opacity="0.22"/>
+      <stop offset="0.16" stop-color="var(--silver)" stop-opacity="0.12"/>
+      <stop offset="0.45" stop-color="var(--silver)" stop-opacity="0.025"/>
+      <stop offset="0.7" stop-color="var(--silver)" stop-opacity="0"/>
     </radialGradient>
     <linearGradient id="flame" x2="0.3" y2="1">
-      <stop stop-color="#edf2ef"/>
-      <stop offset="0.65" stop-color="#d8deda"/>
-      <stop offset="1" stop-color="#7bd39a" stop-opacity="0.5"/>
+      <stop stop-color="var(--text)"/>
+      <stop offset="0.65" stop-color="var(--silver)"/>
+      <stop offset="1" stop-color="var(--silver)"/>
     </linearGradient>
     <path id="tree" d="M0 0 14 38 7 36 23 67 12 63 30 98 3 91 3 116 -3 116 -3 91 -30 98 -12 63 -23 67 -7 36 -14 38Z"/>
   </defs>
@@ -43,16 +54,16 @@
     <use href="#tree" transform="translate(1158 378) scale(1.5 2.8)"/>
   </g>
   <path d="M448 650 C569 520 1005 635 1037 432 S960 264 992 155 C975 272 1081 326 1054 438 S673 598 585 650Z" fill="url(#path)"/>
-  <path d="M510 650 C621 549 1037 624 1045 434 S963 270 992 155" fill="none" stroke="#d8deda" stroke-opacity="0.2"/>
-  <path d="M1038 479 Q1047 459 1045 440" fill="none" stroke="#d8deda" stroke-opacity="0.65" stroke-width="2" stroke-linecap="round"/>
+  <path d="M510 650 C621 549 1037 624 1045 434 S963 270 992 155" fill="none" stroke="var(--silver)" stroke-opacity="0.2"/>
+  <path d="M1038 479 Q1047 459 1045 440" fill="none" stroke="var(--silver)" stroke-opacity="0.65" stroke-width="2" stroke-linecap="round"/>
   <g transform="translate(992 148)">
     <path d="M0 7 C-16 4 -14 -8 -7 -17 C-5 -10 -1 -12 -2 -22 C-3 -30 4 -34 5 -39 C6 -26 17 -18 13 -7 C11 1 7 6 0 7Z" fill="url(#flame)"/>
-    <path d="M0 5 C-6 1 -5 -5 0 -13 C-1 -6 7 -4 5 1 C4 4 2 5 0 5Z" fill="#edf2ef" opacity="0.75"/>
+    <path d="M0 5 C-6 1 -5 -5 0 -13 C-1 -6 7 -4 5 1 C4 4 2 5 0 5Z" fill="var(--text)"/>
   </g>
   <g font-family="Inter, ui-sans-serif, system-ui, sans-serif">
-    <text x="100" y="230" fill="#edf2ef" font-size="72" font-weight="700" letter-spacing="-3">Andrea Ragalzi</text>
-    <text x="100" y="305" fill="#7bd39a" font-size="48" font-weight="600" letter-spacing="-1.5">Backend Engineer</text>
-    <text x="100" y="367" fill="#d8deda" font-size="28">Python · REST APIs · System Integrations</text>
-    <text x="100" y="470" fill="#a8b3ac" font-size="24">Málaga, Spain</text>
+    <text x="100" y="230" fill="var(--text)" font-size="72" font-weight="700" letter-spacing="-3">Andrea Ragalzi</text>
+    <text x="100" y="305" fill="var(--silver)" font-size="48" font-weight="600" letter-spacing="-1.5">Backend Engineer</text>
+    <text x="100" y="367" fill="var(--silver)" font-size="28">Python · REST APIs · System Integrations</text>
+    <text x="100" y="470" fill="var(--green)" font-size="24">Málaga, Spain</text>
   </g>
 </svg>
